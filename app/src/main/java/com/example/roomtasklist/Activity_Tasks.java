@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ public class Activity_Tasks extends AppCompatActivity implements Adapter_Tasks.C
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Список задач");
         setContentView(R.layout.activity_tasks);
 
             long id=getIntent().getLongExtra("id", 0);
@@ -47,26 +50,17 @@ public class Activity_Tasks extends AppCompatActivity implements Adapter_Tasks.C
             @Override
             public void onClick(View v) {
                 switch (v.getId()){
-                    case R.id.btn_backToMain:
-                        Intent main=new Intent(Activity_Tasks.this, Activity_Main.class);
-                        startActivity(main);
-                        break;
-                    case R.id.btn_AddTask:
+                    case R.id.btnAddTask:
                         Intent add=new Intent(Activity_Tasks.this, Activity_Dialog_NewTask.class);
                         add.putExtra("id", last_id);
                         startActivity(add);
                         break;
-                    case R.id.btn_ClearTascks:
-                        break;
                 }
             }
         };
-        btn_backMain=findViewById(R.id.btn_backToMain);
-        btn_backMain.setOnClickListener(oclBtn);
-        btn_AddTask=findViewById(R.id.btn_AddTask);
+        btn_AddTask=findViewById(R.id.btnAddTask);
         btn_AddTask.setOnClickListener(oclBtn);
-        btn_ClearTasks=findViewById(R.id.btn_ClearTascks);
-        btn_ClearTasks.setOnClickListener(oclBtn);
+
     }
 
     private void initializeList(){
@@ -89,6 +83,26 @@ public class Activity_Tasks extends AppCompatActivity implements Adapter_Tasks.C
             Toast.makeText(getApplicationContext(), "RV", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tasks_bar, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_back:
+                Intent main=new Intent(Activity_Tasks.this, Activity_Main.class);
+                startActivity(main);
+                break;
+        }
+        return true;
     }
 
     @Override

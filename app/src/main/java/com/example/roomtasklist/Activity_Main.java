@@ -26,6 +26,7 @@ public class Activity_Main extends AppCompatActivity implements Adapter_Notes.Ca
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Заметки");
         setContentView(R.layout.activity_main);
 
         dbNote= Room.databaseBuilder(getApplicationContext(),
@@ -38,23 +39,16 @@ public class Activity_Main extends AppCompatActivity implements Adapter_Notes.Ca
             @Override
             public void onClick(View v) {
                 switch (v.getId()){
-                    case R.id.btn_AddNote:
+                    case R.id.btnAddNote:
                         Intent add=new Intent(Activity_Main.this, Activity_Dialog_NewNote.class);
                         startActivity(add);
-                        break;
-                    case R.id.btn_ClearNotes:
-                        dbNote.noteDao().deleteAll();
-                        initializeList();
-                        initializeRecycleView();
                         break;
                 }
             }
         };
 
 
-        btn_Clear=findViewById(R.id.btn_ClearNotes);
-        btn_Clear.setOnClickListener(oclBtn);
-        btn_Add=findViewById(R.id.btn_AddNote);
+        btn_Add=findViewById(R.id.btnAddNote);
         btn_Add.setOnClickListener(oclBtn);
     }
 
