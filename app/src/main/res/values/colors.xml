@@ -9,7 +9,7 @@
     <color name="colorText">#1A1A1A</color>
     <color name="colorWhiteText">#FFFFFF</color>
     <color name="colorYellow">#F8CA2F</color>
-    <color name="colorTransparent">#000000</color>
+    <color name="colorTransparent">#00000000</color>
     <color name="colorBlue">#00AEC1</color>
     <color name="colorRed">#D43B57</color>
 </resources>
