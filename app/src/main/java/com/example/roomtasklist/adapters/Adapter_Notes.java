@@ -1,8 +1,7 @@
-package com.example.roomtasklist;
+package com.example.roomtasklist.adapters;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,9 +11,11 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.roomtasklist.room.DataBase_Note;
+import com.example.roomtasklist.room.entity.Note;
+import com.example.roomtasklist.R;
 
 import java.util.List;
 

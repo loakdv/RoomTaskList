@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@color/colorTransparent"
+                    android:background="@color/colorWhiteText"
                     android:text="отмена" />
 
                 <LinearLayout
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:background="@color/colorTransparent"
+                    android:background="@color/colorWhiteText"
                     android:text="Готово" />
 
             </LinearLayout>

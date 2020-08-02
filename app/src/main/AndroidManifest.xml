@@ -9,21 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_new"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Main">
+        <activity android:name=".activities.based.Activity_Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Dialog_NewNote"
+        <activity android:name=".activities.dialog.Activity_Dialog_NewNote"
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
             android:label="Новая заметка"></activity>
-        <activity android:name=".Activity_Dialog_NewTask"
+        <activity android:name=".activities.dialog.Activity_Dialog_NewTask"
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
             android:label="Новая задача">
         </activity>
-        <activity android:name=".Activity_Tasks"></activity>
+        <activity android:name=".activities.based.Activity_Tasks"></activity>
 
     </application>
 

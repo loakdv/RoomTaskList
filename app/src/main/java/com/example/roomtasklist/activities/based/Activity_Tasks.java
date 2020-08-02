@@ -1,6 +1,5 @@
-package com.example.roomtasklist;
+package com.example.roomtasklist.activities.based;
 
-import android.app.Activity;
 import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.roomtasklist.adapters.Adapter_Tasks;
+import com.example.roomtasklist.room.DataBase_Note;
+import com.example.roomtasklist.R;
+import com.example.roomtasklist.room.entity.Task;
+import com.example.roomtasklist.activities.dialog.Activity_Dialog_NewTask;
 
 import java.util.List;
 

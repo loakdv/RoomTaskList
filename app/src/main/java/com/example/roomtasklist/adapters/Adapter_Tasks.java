@@ -1,4 +1,4 @@
-package com.example.roomtasklist;
+package com.example.roomtasklist.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -11,6 +11,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.roomtasklist.R;
+import com.example.roomtasklist.room.entity.Task;
 
 import java.util.List;
 

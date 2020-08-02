@@ -1,4 +1,4 @@
-package com.example.roomtasklist;
+package com.example.roomtasklist.room.entity;
 
 
 import android.arch.persistence.room.Entity;
